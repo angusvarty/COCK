@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <title>COCK</title>
+    <script>
+        //get the current time string in the format of "hh:mm:ss"
+
+        function updateTime() {
+            //get the time in hh:mm:ss
+            let time = new Date().toLocaleTimeString();
+
+            //get the date in dd/mm/yyyy
+            let date = new Date().toLocaleDateString();
+
+            //update the time and date
+
+            document.getElementById("time").innerHTML = time;
+            document.getElementById("date").innerHTML = date;
+        }
+        window.onload = function () {
+            setInterval(() => {
+                updateTime();
+            }, 1000);
+            updateTime();
+        };
+    </script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="new.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div>
+            <div class="container" id="background">
+                <h1 id="time"></h1>
+                <h2 id="date"></h2>
+            </div>
+        </div>
+    </body>
+</html>
